@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
+				<title>博客 - 萌新Online | Codeforces/Atcoder/Newcoder在线交流群</title>
+
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+
+		<!-- Glyphicons from bootstrap 3 -->
+		<link type="text/css" rel="stylesheet" href="https://acm.nflsoj.com/css/glyphicon.css?version=1582435459" />
+		<link type="text/css" rel="stylesheet" href="https://acm.nflsoj.com/dist/nflsoj.styles.css?version=1582435715" />
+					<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha256-OUFW7hFO0/r5aEGTQOz9F/aXQOt+TwqI1Z4fbVvww04=" crossorigin="anonymous"></script>
+
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.12.0/umd/react.production.min.js" integrity="sha256-Ef0vObdWpkMAnxp39TYSLVS/vVUokDE8CDFnx7tjY6U=" crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.12.0/umd/react-dom.production.min.js" integrity="sha256-p2yuFdE8hNZsQ31Qk+s8N+Me2fL5cc6NKXOC0U9uGww=" crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.12.0/umd/react-dom-server.browser.production.min.js" integrity="sha256-WniIhLqiSx7fyeekjzz9dwHU/q43XQxhHDe/J+iZeZg=" crossorigin="anonymous"></script>
+
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/reactstrap/8.4.1/reactstrap.full.min.js" integrity="sha256-IoAqyRcr04nVAHR2NpJNrq1p+W8FeyToS/Ulx6nxMg0=" crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js" integrity="sha256-VeNaFBVDhoX3H+gJ37DpT/nTuZTdjYro9yBruHjVmoQ=" crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js" integrity="sha256-T/f7Sju1ZfNNfBh7skWn0idlCBcI3RwdLSS4/I7NQKQ=" crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+		
+		<!-- jQuery autosize -->
+		<script src="https://acm.nflsoj.com/js/jquery.autosize.min.js?version=1582435459"></script>
+		<script type="text/javascript">
+			// See user.ts.
+			var OJUser = {
+				name: null,
+				email: null,
+				group: ""
+						};
+
+			$(function() {
+				$('textarea').autosize();
+			});
+
+			var before_window_unload_message = null;
+			$(window).on('beforeunload', function() {
+				if (before_window_unload_message !== null) {
+					return before_window_unload_message;
+				}
+			});
+
+			function getBlogUrl(username, path) {
+				var format = "https:\/\/acm.nflsoj.com\/blog\/{user}{path}";
+				return format.replace("{user}", username.replace('_', '-').toLowerCase()).replace("{path}", path);
+			}
+		</script>
+
+		<script src="https://acm.nflsoj.com/dist/nflsoj.bundle.js?version=1582435715"></script>
+		<!-- jQuery modal -->
+		<script src="https://acm.nflsoj.com/js/jquery.modal.js?version=1582435459"></script>
+		<!-- jQuery tag canvas -->
+		
+		<!-- LAB -->
+		<script src="https://acm.nflsoj.com/js/LAB.min.js?version=1582435459"></script>
+		<!-- NFLSOJ ico -->
+		<link rel="apple-touch-icon" sizes="60x60" href="https://acm.nflsoj.com/pictures/apple-touch-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="https://acm.nflsoj.com/pictures/apple-touch-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="https://acm.nflsoj.com/pictures/apple-touch-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="https://acm.nflsoj.com/pictures/apple-touch-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="https://acm.nflsoj.com/pictures/apple-touch-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="https://acm.nflsoj.com/pictures/AlgoNFLS-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="https://acm.nflsoj.com/pictures/AlgoNFLS-16x16.png">
+		<link rel="manifest" href="https://acm.nflsoj.com/resources/site.webmanifest">
+		<link rel="mask-icon" href="https://acm.nflsoj.com/pictures/safari-pinned-tab.svg" color="#5bbad5">
+		<link rel="shortcut icon" href="https://acm.nflsoj.com/pictures/AlgoNFLS.ico">
+		<meta name="apple-mobile-web-app-title" content="NFLSOJ">
+		<meta name="application-name" content="NFLSOJ">
+		<meta name="msapplication-TileColor" content="#721d1a">
+		<meta name="msapplication-config" content="https://acm.nflsoj.com/resources/browserconfig.xml">
+		<meta name="theme-color" content="#ffffff">
+
+		<!-- OpenSearch -->
+		<link rel="search" type="application/opensearchdescription+xml" title="NFLSOJ" href="https://acm.nflsoj.com/resources/opensearch.xml" />
+
+		
+		
+		<!-- MD5 -->
+		<script src="https://acm.nflsoj.com/js/md5.min.js?version=1582435459"></script>	
+	</head>
+	<body role="document">
+	<header class="navbar navbar-expand-lg navbar-light bg-light fixed-top" role="banner">
+	<div class="container">
+		<a class="navbar-brand mb-0 h1" href="https://mengxinonline.github.io/homepage">MXOnline</a>
+		<button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="navbar-collapse collapse">
+			<ul class="navbar-nav order-1 ml-0 ml-lg-2 mr-auto">
+				<li class="nav-item mr-lg-3"><a class="nav-link" href="/homepage">
+					<span class="glyphicon glyphicon-edit"></span>主页-Home</a></li>
+				<li class="nav-item mr-lg-3"><a class="nav-link" href="/faq">
+					<span class="glyphicon glyphicon-question-sign"></span>帮助-Help</a></li>
+			</ul>
+			<ul class="navbar-nav order-3">
+		</div><!--/.nav-collapse -->
+	</div>
+</header>
+				<div class="container" role="main">
+			<div class="uoj-content">
+<div class="card">
+	<div class="card-body">
+		<div class="row">
+			<div class="col-12 col-md-9 order-2 order-md-1">
+				<table class="table">
+					<thead>
+						<tr>
+							<th style="width:60%">公告</th>
+							<th style="width:20%"></th>
+							<th style="width:20%"></th>
+						</tr>
+					</thead>
+				  	<tbody>																<tr>
+						<td><a href="/blog-0">欢迎来到萌新Online</a></td>
+						<td>by <span class ="uoj-username" data-rating="1500" data-link="true">tourist</span></td>
+						<td><small>2020-03-24 08:28:57</small></td>
+						<tr><td class="text-right" colspan="233"><a href="/announcements">所有公告……</a></td></tr>
+					</tbody>
+				</table>
+			</div>
+			<style>
+			@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (min-width: 768px) {
+				#div-nflsoj-logo-img {
+					max-height: 20rem;
+				}
+			}
+			</style>
+		</div>
+	</div>
+</div>
+<br>
+<div class="card">
+	<div class="card-body">
+		<div class="row">
+			<div class="col-12 col-md-9 order-2 order-md-1">
+				<table class="table">
+					<thead>
+						<tr>
+							<th style="width:60%">博客</th>
+							<th style="width:20%"></th>
+							<th style="width:20%"></th>
+						</tr>
+					</thead>
+				  	<tbody>																<tr>
+						<td><a href="/blog-0">欢迎来到萌新Online</a></td>
+						<td>by <span class ="uoj-username" data-rating="1500" data-link="true">tourist</span></td>
+						<td><small>2020-03-24 08:28:57</small></td>
+						<tr><td class="text-right" colspan="233"><a href="/blogs">所有博客……</a></td></tr>
+					</tbody>
+					<h3 style="color:red">博客开发中！</h3>
+				</table>
+			</div>
+			<style>
+			@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (min-width: 768px) {
+				#div-nflsoj-logo-img {
+					max-height: 20rem;
+				}
+			}
+			</style>
+		</div>
+	</div>
+</div>
+	<div class="uoj-footer">
+				<ul class="list-inline">
+					<li class="list-inline-item">NACA - NJ ｜ National Academic Communication Association</li>
+				</ul>
+	</div>
+</div>
+	</body>
+</html>
